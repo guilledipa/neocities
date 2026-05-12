@@ -8,14 +8,17 @@
 body {
     background-image: url('images/bg_stars.gif');
     background-repeat: repeat;
-    color: #ff00ff; /* Neon Magenta */
+    color: #ff00ff;
+    /* Neon Magenta */
     font-family: "Comic Sans MS", "Comic Sans", cursive;
     margin: 0;
     padding: 20px;
     cursor: url('https://cur.cursors-4u.net/games/gam-4/gam372.cur'), auto;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: "Times New Roman", Times, serif;
     text-transform: uppercase;
 }
@@ -25,9 +28,9 @@ h1, h2, h3 {
     font-size: 48px;
     font-weight: bold;
     color: #fffb00;
-    text-shadow: 
+    text-shadow:
         3px 3px 0px #000,
-        -1px -1px 0px #000,  
+        -1px -1px 0px #000,
         1px -1px 0px #000,
         -1px 1px 0px #000,
         1px 1px 0px #000;
@@ -35,14 +38,15 @@ h1, h2, h3 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
-    filter: drop-shadow(5px 5px 2px rgba(0,0,0,0.5));
+    filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.5));
 }
 
 /* TABLE LAYOUT AESTHETIC */
 table.main-layout {
     width: 800px;
     margin: 0 auto;
-    background-color: #000080; /* Navy Blue */
+    background-color: #000080;
+    /* Navy Blue */
     border: 5px outset #0000ff;
     border-collapse: separate;
     border-spacing: 5px;
@@ -51,7 +55,8 @@ table.main-layout {
 td {
     border: 2px inset #ffffff;
     padding: 15px;
-    background-color: #c0c0c0; /* Classic Slate Gray */
+    background-color: #c0c0c0;
+    /* Classic Slate Gray */
     color: #000;
 }
 
@@ -62,64 +67,103 @@ td {
 }
 
 /* BLINK TAG EMULATION */
-blink, .blink {
+blink,
+.blink {
     animation: blinker 1s linear infinite;
 }
 
 @keyframes blinker {
-    50% { opacity: 0; }
+    50% {
+        opacity: 0;
+    }
 }
 
-/* LINKS */
-a {
-    color: #0000ee;
-    text-decoration: underline;
+<<<<<<< HEAD
+
+/* Marquee style */
+marquee {
+    font-size: 18px;
     font-weight: bold;
+    color: #00FF00;
+    /* Fluorescent Green */
+    background-color: #000000;
+    border: 3px double #808080;
+    padding: 5px;
 }
 
-a:visited {
-    color: #551a8b;
+table {
+    border-color: #808080;
 }
 
-a:hover {
-    color: #ff0000;
-    background-color: #ffff00;
+td {
+    padding: 10px;
 }
 
-/* MARQUEE FALLBACK (if needed, but marquee usually works) */
-.marquee-container {
-    background-color: #ff0;
-    color: #000;
-    font-weight: bold;
-    border: 2px solid #000;
-    padding: 2px;
-}
+h1,
+h2,
+h3 {
+    color: #00FF00;
+    /* Fluorescent Green */
+    text-transform: uppercase;
+    =======
 
-/* SCROLLBARS (IE Style) */
-body {
-    scrollbar-face-color: #c0c0c0;
-    scrollbar-shadow-color: #808080;
-    scrollbar-highlight-color: #ffffff;
-    scrollbar-3dlight-color: #c0c0c0;
-    scrollbar-darkshadow-color: #000000;
-    scrollbar-track-color: #dfdfdf;
-    scrollbar-arrow-color: #000080;
-}
+    /* LINKS */
+    a {
+        color: #0000ee;
+        text-decoration: underline;
+        font-weight: bold;
+    }
 
-.visitor-counter {
-    background-color: #000;
-    color: #0f0;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    font-size: 24px;
-    padding: 5px 10px;
-    border: 3px inset #808080;
-    display: inline-block;
-}
+    a:visited {
+        color: #551a8b;
+    }
 
-.button-88x31 {
-    width: 88px;
-    height: 31px;
-    border: 1px solid #000;
-    margin: 2px;
-}
+    a:hover {
+        color: #ff0000;
+        background-color: #ffff00;
+    }
+
+    /* MARQUEE FALLBACK (if needed, but marquee usually works) */
+    .marquee-container {
+        background-color: #ff0;
+        color: #000;
+        font-weight: bold;
+        border: 2px solid #000;
+        padding: 2px;
+    }
+
+    /* SCROLLBARS (IE Style) */
+    body {
+        scrollbar-face-color: #c0c0c0;
+        scrollbar-shadow-color: #808080;
+        scrollbar-highlight-color: #ffffff;
+        scrollbar-3dlight-color: #c0c0c0;
+        scrollbar-darkshadow-color: #000000;
+        scrollbar-track-color: #dfdfdf;
+        scrollbar-arrow-color: #000080;
+        >>>>>>>main
+    }
+
+    .visitor-counter {
+        background-color: #000;
+        color: #0f0;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: 24px;
+        padding: 5px 10px;
+        border: 3px inset #808080;
+        display: inline-block;
+    }
+
+    <<<<<<< HEAD hr {
+        border: 0;
+        height: 2px;
+        background-image: linear-gradient(to right, rgba(0, 255, 0, 0), rgba(0, 255, 0, 0.75), rgba(0, 255, 0, 0));
+
+        =======.button-88x31 {
+            width: 88px;
+            height: 31px;
+            border: 1px solid #000;
+            margin: 2px;
+            >>>>>>>main
+        }
