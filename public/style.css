@@ -1,91 +1,36 @@
-/* THE 90s EXPERIENCE */
-
-@font-face {
-    font-family: 'PixelScript';
-    src: local('Comic Sans MS'), local('Times New Roman');
-}
-
 body {
     background-image: url('images/bg_stars.gif');
     background-repeat: repeat;
-    color: #ff00ff;
-    /* Neon Magenta */
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-    margin: 0;
-    padding: 20px;
-    cursor: url('https://cur.cursors-4u.net/games/gam-4/gam372.cur'), auto;
+    background-color: #000000;
+    color: #FFFF00; /* Yellow */
+    font-family: "Comic Sans MS", "Comic Sans", "Impact", "Papyrus", sans-serif;
+    margin: 20px;
 }
 
-h1,
-h2,
-h3 {
-    font-family: "Times New Roman", Times, serif;
-    text-transform: uppercase;
+/* Links */
+a:link {
+    color: #0000FF;
+    text-decoration: underline;
 }
 
-/* WordArt-ish header */
-.wordart {
-    font-size: 48px;
-    font-weight: bold;
-    color: #fffb00;
-    text-shadow:
-        3px 3px 0px #000,
-        -1px -1px 0px #000,
-        1px -1px 0px #000,
-        -1px 1px 0px #000,
-        1px 1px 0px #000;
-    background: linear-gradient(to bottom, #fffb00 0%, #ff8c00 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: inline-block;
-    filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.5));
+a:visited {
+    color: #800080;
 }
 
-/* TABLE LAYOUT AESTHETIC */
-table.main-layout {
-    width: 800px;
-    margin: 0 auto;
-    background-color: #000080;
-    /* Navy Blue */
-    border: 5px outset #0000ff;
-    border-collapse: separate;
-    border-spacing: 5px;
-}
-
-td {
-    border: 2px inset #ffffff;
-    padding: 15px;
-    background-color: #c0c0c0;
-    /* Classic Slate Gray */
-    color: #000;
-}
-
-.content-box {
-    background-image: url('images/marble.gif');
-    border: 3px double #000;
-    padding: 10px;
-}
-
-/* BLINK TAG EMULATION */
-blink,
-.blink {
+/* Simulated blink tag */
+blink, .blink {
     animation: blinker 1s linear infinite;
 }
 
 @keyframes blinker {
-    50% {
-        opacity: 0;
-    }
+    50% { opacity: 0; }
 }
-
-<<<<<<< HEAD
 
 /* Marquee style */
 marquee {
     font-size: 18px;
     font-weight: bold;
-    color: #00FF00;
-    /* Fluorescent Green */
+    color: #00FF00; /* Fluorescent Green */
     background-color: #000000;
     border: 3px double #808080;
     padding: 5px;
@@ -99,71 +44,24 @@ td {
     padding: 10px;
 }
 
-h1,
-h2,
-h3 {
-    color: #00FF00;
-    /* Fluorescent Green */
+h1, h2, h3 {
+    color: #00FF00; /* Fluorescent Green */
     text-transform: uppercase;
-    =======
+}
 
-    /* LINKS */
-    a {
-        color: #0000ee;
-        text-decoration: underline;
-        font-weight: bold;
-    }
+.visitor-counter {
+    background-color: #000;
+    color: #0f0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 5px 10px;
+    border: 3px inset #808080;
+    display: inline-block;
+}
 
-    a:visited {
-        color: #551a8b;
-    }
-
-    a:hover {
-        color: #ff0000;
-        background-color: #ffff00;
-    }
-
-    /* MARQUEE FALLBACK (if needed, but marquee usually works) */
-    .marquee-container {
-        background-color: #ff0;
-        color: #000;
-        font-weight: bold;
-        border: 2px solid #000;
-        padding: 2px;
-    }
-
-    /* SCROLLBARS (IE Style) */
-    body {
-        scrollbar-face-color: #c0c0c0;
-        scrollbar-shadow-color: #808080;
-        scrollbar-highlight-color: #ffffff;
-        scrollbar-3dlight-color: #c0c0c0;
-        scrollbar-darkshadow-color: #000000;
-        scrollbar-track-color: #dfdfdf;
-        scrollbar-arrow-color: #000080;
-        >>>>>>>main
-    }
-
-    .visitor-counter {
-        background-color: #000;
-        color: #0f0;
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: bold;
-        font-size: 24px;
-        padding: 5px 10px;
-        border: 3px inset #808080;
-        display: inline-block;
-    }
-
-    <<<<<<< HEAD hr {
-        border: 0;
-        height: 2px;
-        background-image: linear-gradient(to right, rgba(0, 255, 0, 0), rgba(0, 255, 0, 0.75), rgba(0, 255, 0, 0));
-
-        =======.button-88x31 {
-            width: 88px;
-            height: 31px;
-            border: 1px solid #000;
-            margin: 2px;
-            >>>>>>>main
-        }
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 255, 0, 0), rgba(0, 255, 0, 0.75), rgba(0, 255, 0, 0));
+}
