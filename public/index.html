@@ -7,10 +7,11 @@
 </head>
 <body bgcolor="#000000" text="#FFFF00" link="#0000FF" vlink="#800080">
 
-<embed src="audio/music.mid" autostart="true" loop="true" hidden="true">
-<noembed>
-    <bgsound src="audio/music.mid" loop="infinite">
-</noembed>
+<audio id="bgmusic" loop>
+    <source src="audio/music.mid" type="audio/midi">
+    <embed src="audio/music.mid" autostart="true" loop="true" hidden="true">
+</audio>
+<bgsound src="audio/music.mid" loop="infinite">
 
 <center>
     <h1 class="blink">¡BIENVENIDOS A MI SITIO PERSONAL!</h1>
@@ -28,9 +29,14 @@
                 <hr color="#00FF00">
                 <ul align="left">
                     <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#cv">Mi CV</a></li>
                     <li><a href="#intereses">Mis Intereses</a></li>
                     <li><a href="#guestbook">Libro de Visitas</a></li>
                 </ul>
+                <hr color="#00FF00">
+                <font size="2">Musica:</font><br>
+                <button onclick="document.getElementById('bgmusic').play()">PLAY</button>
+                <button onclick="document.getElementById('bgmusic').pause()">STOP</button>
                 <hr color="#00FF00">
                 <img src="images/torch.gif" width="50" alt="Antorcha"><br>
                 <img src="images/torch.gif" width="50" alt="Antorcha"><br>
@@ -49,6 +55,36 @@
                     <img src="images/baby.gif" width="150" alt="Dancing Baby"><br>
                     <font size="2">¡Miren al bebe bailarín!</font>
                 </center>
+
+                <center>
+                    <img src="images/rainbow_line.gif" width="400" height="20" alt="-------">
+                </center>
+
+                <a name="cv"></a>
+                <font color="#00FF00" size="5"><b>MI CURRICULUM VITAE</b></font>
+                <table border="1" width="100%" bordercolor="#00FF00" cellpadding="5">
+                    <tr>
+                        <td bgcolor="#003300"><font color="#FFFFFF"><b>Experiencia</b></font></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li><b>Webmaster Senior (1997-Presente)</b> - Especialista en tablas y frames.</li>
+                                <li><b>Experto en GIFs Animados</b> - Curador de la coleccion mas grande de la red.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#003300"><font color="#FFFFFF"><b>Educacion</b></font></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Universidad de la Vida (Mencion en Front-End 1.0)</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
 
                 <center>
                     <img src="images/rainbow_line.gif" width="400" height="20" alt="-------">
@@ -103,10 +139,23 @@
         <tr>
             <td align="center">
                 <font size="2">Eres el visitante numero:</font><br>
-                <div class="visitor-counter">0001337</div>
+                <div id="counter" class="visitor-counter">0000000</div>
             </td>
         </tr>
     </table>
+
+    <script>
+        // Fake visitor counter logic using localStorage
+        var count = localStorage.getItem('visit_count') || 1337;
+        count++;
+        localStorage.setItem('visit_count', count);
+
+        var display = count.toString();
+        while (display.length < 7) {
+            display = "0" + display;
+        }
+        document.getElementById('counter').innerHTML = display;
+    </script>
 
     <br>
     <img src="images/email.gif" width="50" alt="Mail"><br>
@@ -126,9 +175,6 @@
     <br>
     <font size="1">Copyright (c) 1998 MI SITIO WEB - Todos los derechos reservados.</font>
 </center>
-
-
-
 
 </body>
 </html>
