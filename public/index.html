@@ -7,11 +7,11 @@
 </head>
 <body bgcolor="#000000" text="#FFFF00" link="#0000FF" vlink="#800080">
 
-<audio id="bgmusic" loop>
-    <source src="audio/music.mid" type="audio/midi">
-    <embed src="audio/music.mid" autostart="true" loop="true" hidden="true">
-</audio>
-<bgsound src="audio/music.mid" loop="infinite">
+<!-- Hidden MIDI player for old browsers -->
+<embed src="audio/music.mid" autostart="true" loop="true" hidden="true">
+<noembed>
+    <bgsound src="audio/music.mid" loop="infinite">
+</noembed>
 
 <center>
     <h1 class="blink">¡BIENVENIDOS A MI SITIO PERSONAL!</h1>
@@ -34,10 +34,12 @@
                     <li><a href="#guestbook">Libro de Visitas</a></li>
                 </ul>
                 <hr color="#00FF00">
-                <font size="2">Musica:</font><br>
-                <button onclick="document.getElementById('bgmusic').play()">PLAY</button>
-                <button onclick="document.getElementById('bgmusic').pause()">STOP</button>
+                <font size="2">Musica MIDI:</font><br>
+                <font size="1">(Bájalo si no suena)</font><br>
+                <a href="audio/music.mid">Descargar MIDI</a>
                 <hr color="#00FF00">
+                <img src="images/torch.gif" width="50" alt="Antorcha"><br>
+                <img src="images/torch.gif" width="50" alt="Antorcha"><br>
                 <img src="images/torch.gif" width="50" alt="Antorcha"><br>
                 <img src="images/torch.gif" width="50" alt="Antorcha"><br>
                 <img src="images/torch.gif" width="50" alt="Antorcha">
@@ -64,23 +66,29 @@
                 <font color="#00FF00" size="5"><b>MI CURRICULUM VITAE</b></font>
                 <table border="1" width="100%" bordercolor="#00FF00" cellpadding="5">
                     <tr>
-                        <td bgcolor="#003300"><font color="#FFFFFF"><b>Experiencia</b></font></td>
+                        <td bgcolor="#003300" align="center">
+                            <img src="images/under_construction.gif" width="50">
+                            <font color="#FFFFFF"><b>EXPERIENCIA LABORAL</b></font>
+                            <img src="images/under_construction.gif" width="50">
+                        </td>
                     </tr>
                     <tr>
                         <td>
                             <ul>
-                                <li><b>Webmaster Senior (1997-Presente)</b> - Especialista en tablas y frames.</li>
+                                <li><b>Webmaster Senior (1997-Presente)</b> - Especialista en tablas anidadas y frames.</li>
                                 <li><b>Experto en GIFs Animados</b> - Curador de la coleccion mas grande de la red.</li>
+                                <li><b>Consultor en Buscadores</b> - Experto en Altavista y Yahoo!.</li>
                             </ul>
                         </td>
                     </tr>
                     <tr>
-                        <td bgcolor="#003300"><font color="#FFFFFF"><b>Educacion</b></font></td>
+                        <td bgcolor="#003300" align="center"><font color="#FFFFFF"><b>EDUCACION</b></font></td>
                     </tr>
                     <tr>
                         <td>
                             <ul>
                                 <li>Universidad de la Vida (Mencion en Front-End 1.0)</li>
+                                <li>Curso de HTML en Fasciculos (Ediciones Salvat, 1996)</li>
                             </ul>
                         </td>
                     </tr>
@@ -137,24 +145,30 @@
 
     <table border="1" bgcolor="#000000" cellpadding="5" bordercolor="#00FF00">
         <tr>
-            <td align="center">
+            <td align="center" class="counter-box">
                 <font size="2">Eres el visitante numero:</font><br>
-                <div id="counter" class="visitor-counter">0000000</div>
+                <div id="counter" class="visitor-counter">0001337</div>
             </td>
         </tr>
     </table>
 
     <script>
-        // Fake visitor counter logic using localStorage
-        var count = localStorage.getItem('visit_count') || 1337;
-        count++;
-        localStorage.setItem('visit_count', count);
+        // visitor counter logic
+        try {
+            var storedCount = localStorage.getItem('visit_count');
+            var count = storedCount ? parseInt(storedCount) : 1337;
+            count++;
+            localStorage.setItem('visit_count', count);
 
-        var display = count.toString();
-        while (display.length < 7) {
-            display = "0" + display;
+            var display = count.toString();
+            while (display.length < 7) {
+                display = "0" + display;
+            }
+            document.getElementById('counter').innerHTML = display;
+        } catch (e) {
+            console.error("No se pudo acceder al localStorage", e);
+            document.getElementById('counter').innerHTML = "0001337";
         }
-        document.getElementById('counter').innerHTML = display;
     </script>
 
     <br>
